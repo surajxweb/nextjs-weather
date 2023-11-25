@@ -40,7 +40,7 @@ export default function Home() {
         setWeatherData={setWeatherData}
         setForcastData={setForcastData}
       />
-      <div className={styles.weather}>
+      {weatherData.length>0 && <div className={styles.weather}>
         <h1 className={styles.city}>
           {weatherData[0]?.city_name}, {weatherData[0]?.country_code}
         </h1>
@@ -57,7 +57,7 @@ export default function Home() {
           {`Feels like ${weatherData[0]?.app_temp}°C.`}{" "}
           <span className={styles.emojie}>{feelsLikeEmojie}</span>
         </div>
-         <div
+         {/* <div
           className={styles.aqi}
           style={{
             backgroundColor:
@@ -75,7 +75,7 @@ export default function Home() {
           }}
         >
           Air Quality Index: {weatherData[0]?.aqi}
-        </div> 
+        </div>  */}
         <div className={styles.moreinfo}>
           <div className={styles.info}>
             <WiHumidity size="1.8em" />
@@ -100,9 +100,9 @@ export default function Home() {
             <div className={styles.data}>{weatherData[0]?.vis}km</div>
           </div>
         </div>
-      </div>
+      </div>}
       {/* <ForcastCarousel forcastData={forcastData} /> */}
-      <HourlyForcast forcastData={forcastData}/>
+      {forcastData.length>0 && <HourlyForcast forcastData={forcastData}/>}
     </main>
   );
 }

@@ -9,7 +9,7 @@ const HourlyForcast: React.FC<ForcastCarouselProps> = ({ forcastData }) => {
     const usableData = forcastData.slice(0,5);
   return (
     <div className={styles.container}>
-      <h2>Hourly Forcast</h2>
+      <h2>6 Hour Forcast</h2>
 
      <div className={styles.list}>
      {usableData?.map((data: any, i: number) => (
