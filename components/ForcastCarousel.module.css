@@ -1,0 +1,34 @@
+.container {
+  margin: 10px;
+  padding: 20px;
+  color: black;
+}
+
+.container h2 {
+  margin: 10px 0;
+}
+
+.forcastCard {
+  background: rgba(255, 255, 255); /* Use a semi-transparent white color */
+  backdrop-filter: blur(
+    10px
+  ); /* Apply a blur effect to create the glass effect */
+  border-radius: 10px; /* Apply rounded corners */
+  padding: 10px; /* Add some padding for spacing */
+
+  /* Add shadow to enhance the effect */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* A light shadow */
+  width: 200px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 10px;
+  font-size: 17px;
+}
+
+.icon img {
+  /* filter: drop-shadow(rgba(255, 255, 255, 0.75) 0px 5px 30px); */
+  width: 50px;
+  height: auto;
+}

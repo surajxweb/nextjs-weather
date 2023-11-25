@@ -1,0 +1,26 @@
+.form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: bold;
+}
+
+.form button {
+  background-color: transparent;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+.form input {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.form input:focus {
+  background-color: whitesmoke;
+  border: 1px solid red;
+}
