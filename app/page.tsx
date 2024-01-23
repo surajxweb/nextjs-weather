@@ -16,9 +16,6 @@ export default function Home() {
   const [weatherData, setWeatherData] = useState<any[]>([]);
   const [forcastData, setForcastData] = useState<any[]>([]);
 
-  console.log("ye lo weather data: ", weatherData);
-  console.log("ye lo forcast data: ", forcastData);
-
   const feelsLikeEmojie =
     weatherData[0]?.app_temp > 40
       ? "🔥"
@@ -102,7 +99,7 @@ export default function Home() {
         </div>
       </div>}
       {/* <ForcastCarousel forcastData={forcastData} /> */}
-      {forcastData.length>0 && <HourlyForcast forcastData={forcastData}/>}
+      {forcastData?.length>0 && <HourlyForcast forcastData={forcastData}/>}
     </main>
   );
 }

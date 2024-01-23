@@ -25,7 +25,6 @@ const InputForm: React.FC<InputFormProps> = ({
     const forcastResponse = await fetch(`/api/forcast-data?city=${input}`);
     const forcastData = await forcastResponse.json();
     setForcastData(forcastData.forecastData.data);
-    console.log("raw data", forcastData.forecastData.data);
     const response = await fetch(`/api/weather-data?city=${input}`);
     const data = await response.json();
     setWeatherData(data.weatherData.data);
